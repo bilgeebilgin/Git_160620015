@@ -15,7 +15,7 @@
 	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
 		<param name="Target" value="System.out" />
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value=" date: %d****[%t] %-5p****Line:%L ****tip: %c*** class:%x ***message: -%m%n" />
+			<param name="ConversionPattern" value=" date: %d [%t] %-5p tip: %c class:%x - message: %m%n" />
 		</layout>
 	</appender>
 
