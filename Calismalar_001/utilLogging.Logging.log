@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1254" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T13:59:50</date>
+  <millis>1435143590408</millis>
+  <sequence>1</sequence>
+  <logger>utilLogging</logger>
+  <level>INFO</level>
+  <class>utilLogging.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Adding FileHandler</message>
+</record>
+<record>
+  <date>2015-06-24T13:59:50</date>
+  <millis>1435143590409</millis>
+  <sequence>2</sequence>
+  <logger>utilLogging</logger>
+  <level>INFO</level>
+  <class>utilLogging.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Added FileHandler to Logger</message>
+</record>
+<record>
+  <date>2015-06-24T13:59:50</date>
+  <millis>1435143590410</millis>
+  <sequence>3</sequence>
+  <logger>utilLogging</logger>
+  <level>INFO</level>
+  <class>utilLogging.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Logging for fun and profit</message>
+</record>
+<record>
+  <date>2015-06-24T13:59:50</date>
+  <millis>1435143590411</millis>
+  <sequence>4</sequence>
+  <logger>utilLogging</logger>
+  <level>WARNING</level>
+  <class>utilLogging.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Warning...</message>
+</record>
+<record>
+  <date>2015-06-24T13:59:50</date>
+  <millis>1435143590411</millis>
+  <sequence>5</sequence>
+  <logger>utilLogging</logger>
+  <level>SEVERE</level>
+  <class>utilLogging.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Severe...</message>
+</record>
+<record>
+  <date>2015-06-24T13:59:50</date>
+  <millis>1435143590412</millis>
+  <sequence>6</sequence>
+  <logger>utilLogging</logger>
+  <level>INFO</level>
+  <class>utilLogging.Logging</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Logging complete.</message>
+</record>
+</log>

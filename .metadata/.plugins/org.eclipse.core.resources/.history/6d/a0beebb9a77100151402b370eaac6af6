@@ -1,0 +1,71 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.management.OperatingSystemMXBean;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Mai {
+	public Mai() {
+		private int availableProcessors = getOperatingSystemMXBean()
+				.getAvailableProcessors();
+		private long lastSystemTime = 0;
+		private long lastProcessCpuTime = 0;
+	}
+
+	public static void main(String[] args) throws IOException {
+
+		
+
+		String command = "ipconfig /all";
+		Process p = Runtime.getRuntime().exec(command);
+
+		BufferedReader inn = new BufferedReader(new InputStreamReader(
+				p.getInputStream()));
+		Pattern pattern = Pattern.compile(".*Physical Addres.*: (.*)");
+
+		while (true) {
+			String line = inn.readLine();
+
+			if (line == null)
+				break;
+
+			Matcher mm = pattern.matcher(line);
+			if (mm.matches()) {
+				System.out.println(mm.group(1));
+			}
+		}
+	}
+
+	public synchronized double getCpuUsage() {
+		if (l == 0) {
+			baselineCounters();
+			return;
+		}
+
+		long systemTime = System.nanoTime();
+		long processCpuTime = 0;
+
+		if (getOperatingSystemMXBean() instanceof OperatingSystemMXBean) {
+			processCpuTime = ((OperatingSystemMXBean) getOperatingSystemMXBean())
+					.getProcessCpuTime();
+		}
+
+		double cpuUsage = (double) (processCpuTime - lastProcessCpuTime)
+				/ (systemTime - lastSystemTime);
+
+		lastSystemTime = systemTime;
+		lastProcessCpuTime = processCpuTime;
+
+		return cpuUsage / availableProcessors;
+	}
+
+	private void baselineCounters() {
+		lastSystemTime = System.nanoTime();
+
+		if (getOperatingSystemMXBean() instanceof OperatingSystemMXBean) {
+			lastProcessCpuTime = ((OperatingSystemMXBean) getOperatingSystemMXBean())
+					.getProcessCpuTime();
+		}
+	}
+}

@@ -1,0 +1,8 @@
+import java.lang.management.OperatingSystemMXBean;
+
+public class PerformanceMonitor { 
+	 public static native long getProcessCPUTime ();
+	public PerformanceMonitor() {
+		
+	}
+}

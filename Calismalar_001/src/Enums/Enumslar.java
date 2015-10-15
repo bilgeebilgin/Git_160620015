@@ -27,6 +27,7 @@ public class Enumslar {
 
 	}
 
+	@SuppressWarnings("unused")
 	@Deprecated
 	private static int Topla(int a) {
 		// TODO Auto-generated method stub
